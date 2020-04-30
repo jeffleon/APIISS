@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin=""
+    />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+    <style>
+        #mapid { height: 460px; }
+        #tecnical {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: 1;
+            visibility: hidden;
+        }
+        #pause {
+            position: absolute;
+            left: 650px;
+            top: 0px;
+            visibility: hidden;
+        }
+        #Error {
+            position: absolute;
+            left: 220px;
+            top: 28px;
+            visibility: visible;
+        }
+    </style>
+    <title>API</title>
+</head>
+<body>
+    <h1>Where is ISS?</h1>
+    <p>Longitude:  <span id="longitud"></span></p>
+    <p>Latitude:  <span id="latitud"></span></p>
+    <div id="mapid">
+    </div>
+    <img id = "tecnical" src="technical_dificultes.jpg" alt="">
+    <input type="button" value="Pause" id="pause">
+    <input type="button" value="Error" id="Error">
+    <script src="API_ISS.js"></script>
+</body>
+</html>
